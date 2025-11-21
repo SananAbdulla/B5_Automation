@@ -13,7 +13,14 @@ public class DocuportConstants {
 
     // messages
     public static final String ERROR_MESSAGE_FOR_EMPTY_PASSWORD = "Please enter your password";
+    public static final String RESET_PASSWORD_MESSAGE = "Enter the email address associated with your account";
 
     // logo
     public static final String EXPECTED_LOGO_DOCUPORT = "Docuport";
+
+    // forgot password url
+    public static final String FORGOT_PASSWORD_URL = "https://beta.docuport.app/reset-password";
+
+    // email for reset password
+    public static final String EMAIL_FOR_RESET_PASSWORD = "forgotpasswordg1@gmail.com";;
 }
