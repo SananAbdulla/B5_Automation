@@ -7,6 +7,8 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.time.Duration;
+
 import static org.testng.Assert.assertEquals;
 
 public class T4_drag_drop_POM {
@@ -67,6 +69,9 @@ public class T4_drag_drop_POM {
                 .moveByOffset(100, 100)
                 .pause(3000)
                 .perform();
+
+
+
         assertEquals(loopPracticeDragDropPage.bigCircle.getText(), "Drop here.", "Actual does NOT match expected");
     }
 
@@ -77,7 +82,7 @@ public class T4_drag_drop_POM {
                 .moveByOffset(0, -200)
                 .pause(3000)
                 .perform();
-        assertEquals(loopPracticeDragDropPage.bigCircle.getText(), "Now drop...");
+        assertEquals(loopPracticeDragDropPage.smallCircle.getText(), "Now drop...");
     }
 
     @Test
@@ -89,7 +94,7 @@ public class T4_drag_drop_POM {
                 .release()
                 .pause(2000)
                 .perform();
-        assertEquals(loopPracticeDragDropPage.bigCircle.getText(), "Try again!", "Actual does NOT match expected");
+        assertEquals(loopPracticeDragDropPage.smallCircle.getText(), "Try again!", "Actual does NOT match expected");
     }
 
 }

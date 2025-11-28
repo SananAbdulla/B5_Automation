@@ -32,6 +32,7 @@ public class T2_drag_drop {
         Actions actions = new Actions(Driver.getDriver());
         actions.dragAndDrop(bank, debitAccount).perform();
 
+
         WebElement fiveK = Driver.getDriver().findElement(By.xpath("//a[text()=' 5000 ']"));
         WebElement debitAmount = Driver.getDriver().findElement(By.id("amt7"));
 

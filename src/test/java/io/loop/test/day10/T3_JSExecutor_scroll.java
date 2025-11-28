@@ -1,10 +1,9 @@
 package io.loop.test.day10;
 
 import io.loop.test.utilities.Driver;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chromium.ChromiumDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
@@ -34,6 +33,10 @@ public class T3_JSExecutor_scroll {
         //#3 move horizontally or vertically
         JavascriptExecutor js = (JavascriptExecutor)  Driver.getDriver();
         //js.executeScript("window.scroll(0, 5000)");
+
+        WebDriver driver = new ChromeDriver();
+        JavascriptExecutor jss = (JavascriptExecutor) driver;
+        jss.executeScript("window.scroll(0, 5000)");
 
         //#4 move scroll to view
         js.executeScript("arguments[0].scrollIntoView(true)", link);
