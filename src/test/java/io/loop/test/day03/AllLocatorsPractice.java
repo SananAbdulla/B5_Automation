@@ -40,6 +40,7 @@ public class AllLocatorsPractice {
         female.click();
 
 
+
 }
 
 }
