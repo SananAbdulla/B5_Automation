@@ -8,32 +8,57 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import static org.testng.Assert.assertEquals;
+
 
 public class practice {
 
-    WebDriver driver;
-    String actual;
-    String expected;
+//    WebDriver driver;
+//    String actual;
+//    String expected;
+//
+//
+//    @BeforeMethod
+//    public void setUpMethod(){
+//        driver = WebDriverUtil.getDriver(GeneralConstants.CHROME);
+//        driver.manage().window().maximize();
+//    }
+//
+//    @Test
+//    public void googleTitle() {
+//      driver.get("https://www.google.com/");
+//
+//      System.out.println("((RemoteWebDriver) driver ).getSessionId() = " + ((RemoteWebDriver) driver).getSessionId());
+//
+//      expected = "Google";
+//      actual = driver.getTitle();
+//      assertEquals(actual, expected, "Actual does not match expected title");
+//
+//
 
 
- @BeforeMethod
-    public  void setUpMethod (){
-     driver = WebDriverUtil.getDriver(GeneralConstants.CHROME);
-     driver.manage().window().maximize();
+//    }
 
 
- }
-   @Test
-   public void GoogleSearch() {
-     driver.get("https://www.google.com/");
-     expected = "Google";
-     actual = driver.getTitle();
-     Assert.assertEquals(actual, expected);
-
-       System.out.println("practice.GoogleSearch" + ((RemoteWebDriver) driver).getSessionId());
-
- }
+     WebDriver driver;
+     String expected;
+     String actual;
 
 
+     @BeforeMethod
+     public void setUpMethod(){
+         driver = WebDriverUtil.getDriver(GeneralConstants.CHROME);
+         driver.manage().window().maximize();
+     }
+
+    @Test
+     public void googleTitle () {
+       driver.get("https://google.com");
+        System.out.println("((RemoteWebDriver) driver).getCapabilities() = " + ((RemoteWebDriver) driver).getCapabilities());
+        actual = driver.getTitle();
+       expected = "Google";
+
+       assertEquals(actual, expected, "Actual " + actual + "does not match " + expected);
+     }
 
 }

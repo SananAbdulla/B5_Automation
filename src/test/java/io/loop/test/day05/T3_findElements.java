@@ -24,7 +24,7 @@ public class T3_findElements {
         driver.get("https://www.nba.com");
 
         Thread.sleep(10000);
-       driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); // selenium 4
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); // selenium 4
         // driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); - selenium 3
 
         List<WebElement> nbaLinks =  driver.findElements(By.tagName("a"));

@@ -9,6 +9,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 public class T4_testng_with_selenium {
 
@@ -40,5 +41,6 @@ public class T4_testng_with_selenium {
         actual = driver.getTitle();
         assertEquals(actual, expected, "Actual: " + actual + " does NOT match expected: " +expected);
     }
+
 
 }
