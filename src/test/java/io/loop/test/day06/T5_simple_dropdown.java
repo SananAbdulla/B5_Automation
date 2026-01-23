@@ -31,7 +31,7 @@ public class T5_simple_dropdown {
     }
 
     @AfterMethod
-    public void tearDownMethod(){
+    public void tearDownMethod() throws InterruptedException {
         driver.close();
     }
 
@@ -49,6 +49,8 @@ public class T5_simple_dropdown {
         dropdown.selectByVisibleText("Option 1");
         System.out.println(dropdown.getFirstSelectedOption().getText());
         assertEquals(actual, expected, "Actual: " + actual + " does NOT match expected: " +expected);
+
+
     }
 
 }

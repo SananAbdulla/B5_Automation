@@ -27,7 +27,7 @@ public class T2_checkboxes {
             driver.get("http://the-internet.herokuapp.com/checkboxes");
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
-            WebElement checkbox1 = driver.findElement(By.xpath("//input/following-sibling::text()[contains(.,'checkbox 1')]/preceding-sibling::input"));
+            WebElement checkbox1 = driver.findElement(By.xpath("//input/following-sibling::text()[contains(.,' checkbox 1')]/preceding-sibling::input"));
             //input[@type='checkbox' and following-sibling::text()[contains(., ' checkbox 1')]]
             //input[@type='checkbox' and normalize-space(following-sibling::text())='checkbox 2']
 

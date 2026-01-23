@@ -61,14 +61,15 @@ public class T7_multi_dropdown {
          */
 
         // get all options and assign them to the list of elements
-        List<WebElement> options;
-        options = dropdown.getOptions();
 
+        List<WebElement> options = dropdown.getOptions();
 
-//        for (WebElement option : options) {
-//            option.click();
-//            System.out.println("option.getText() = " + option.getText());
-//        }
+        for ( WebElement option: options) {
+            option.click();
+            System.out.println(option.getText());
+        }
+
+        dropdown.deselectAll();
 
 
 
@@ -79,6 +80,6 @@ public class T7_multi_dropdown {
 //
 
 //        options.forEach(WebElement::click);
-//        dropdown.deselectAll();
+        dropdown.deselectAll();
     }
 }

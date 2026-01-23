@@ -29,7 +29,7 @@ public class T1_radio_button {
         // driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         // selenium 4 wait
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 
         WebElement red = driver.findElement(By.xpath("//input[@id = 'red']"));
         WebElement green = driver.findElement(By.xpath("//input[@id = 'green']"));
