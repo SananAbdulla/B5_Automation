@@ -4,6 +4,7 @@ import io.loop.test.utilities.DocuportConstants;
 import io.loop.test.utilities.GeneralConstants;
 import io.loop.test.utilities.WebDriverUtil;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -20,6 +21,9 @@ public class T4_testng_with_selenium {
 
     @BeforeMethod
     public void setUpMethod(){
+//        ChromeOptions options = new ChromeOptions();
+//        options.addArguments("--start-maximized");
+
         driver = WebDriverUtil.getDriver(GeneralConstants.CHROME);
         driver.manage().window().maximize();
     }
@@ -40,7 +44,9 @@ public class T4_testng_with_selenium {
         expected = "Docuport";
         actual = driver.getTitle();
         assertEquals(actual, expected, "Actual: " + actual + " does NOT match expected: " +expected);
+
     }
+
 
 
 }
