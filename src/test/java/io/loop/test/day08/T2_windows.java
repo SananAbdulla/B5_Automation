@@ -44,7 +44,11 @@ public class T2_windows extends TestBase {
         // get all window handles
         Set<String> windowHandles = driver.getWindowHandles();
 
-        // loop through and stay at the last window
+
+
+
+//
+//        // loop through and stay at the last window
         for (String each : windowHandles) {
             System.out.println("each window handle: " + each);
             driver.switchTo().window(each);
@@ -52,8 +56,14 @@ public class T2_windows extends TestBase {
 
         System.out.println("driver.getTitle() = " + driver.getTitle());
 
+
         // switch to original window
         driver.switchTo().window(originalWindow);
         System.out.println("driver.getTitle() = " + driver.getTitle());
+
+
+
     }
+
+
 }

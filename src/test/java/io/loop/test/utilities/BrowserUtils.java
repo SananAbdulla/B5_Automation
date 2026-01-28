@@ -53,7 +53,8 @@ public class BrowserUtils {
                 return;
             }
         }
-        driver.switchTo().window(origin);
+            driver.switchTo().window(origin);
+
     }
 
     /**
