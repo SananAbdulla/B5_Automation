@@ -8,7 +8,9 @@ public class T5_java_faker {
     public void java_faker(){
         Faker faker = new Faker();
 
+        System.out.println("faker.name().firstname() = " + faker.name().firstName());
         System.out.println("faker.name().fullName() = " + faker.name().fullName());
+        ;
         System.out.println("faker.numerify(\"202-###-####\") = " + faker.numerify("202-###-####"));
         System.out.println("faker.letterify(\"????????????\") = " + faker.letterify("????????????"));
         System.out.println("faker.bothify(\"???###???###\") = " + faker.bothify("???###???###"));

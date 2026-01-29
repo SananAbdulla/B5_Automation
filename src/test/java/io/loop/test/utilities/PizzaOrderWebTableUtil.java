@@ -40,5 +40,53 @@ public class PizzaOrderWebTableUtil {
 
         WebElement element = driver.findElement(By.xpath("//td[.='"+name+"']//following-sibling::td"+index));
         return element.getText().trim();
+
+
+
+
+        // With switch case
+
+//        String index;
+//
+//        switch (field.toLowerCase()) {
+//            case "pizza type":
+//                index = "[1]";
+//                break;
+//            case "amount":
+//                index = "[2]";
+//                break;
+//            case "date":
+//                index = "[3]";
+//                break;
+//            case "street":
+//                index = "[4]";
+//                break;
+//            case "city":
+//                index = "[5]";
+//                break;
+//            case "state":
+//                index = "[6]";
+//                break;
+//            case "zip":
+//                index = "[7]";
+//                break;
+//            case "card":
+//                index = "[8]";
+//                break;
+//            case "card number":
+//                index = "[9]";
+//                break;
+//            case "exp":
+//                index = "[10]";
+//                break;
+//            default:
+//                throw new IllegalArgumentException("There is no such field: " + field);
+//        }
+//
+//        WebElement element = driver.findElement(
+//                By.xpath("//td[.='" + name + "']//following-sibling::td" + index)
+//        );
+//        return element.getText().trim();
+
     }
 }

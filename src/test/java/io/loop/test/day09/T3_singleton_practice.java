@@ -13,4 +13,14 @@ public class T3_singleton_practice {
         String str2 = T2_singleton_pattern_example.getWord();
         System.out.println("str2 = " + str2);
     }
+
+
+    @Test
+    void testSingletonPatternExample() {
+        practSingletonPatern s1 = practSingletonPatern.getInstance();
+        practSingletonPatern s2 = practSingletonPatern.getInstance();
+
+        System.out.println(s1.hashCode());
+        System.out.println(s2.hashCode());
+    }
 }

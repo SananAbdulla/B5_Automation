@@ -3,11 +3,13 @@ package io.loop.test.day09;
 import io.loop.test.base.TestBase;
 import io.loop.test.utilities.PizzaOrderWebTableUtil;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 
-public class T1_pizza_order extends TestBase {/*
+public class T1_pizza_order extends TestBase  {/*
     1. go to https://loopcamp.vercel.app/web-tables.html
     2. create a method to test given field for a given name
     3. test type
@@ -25,7 +27,7 @@ public class T1_pizza_order extends TestBase {/*
     @Test
     public void test_pizza_order(){
 
-        driver.get("https://loopcamp.vercel.app/web-tables.html");
+  //      driver.get("https://loopcamp.vercel.app/web-tables.html");
 //
 //        String name = "John Doe";
 //        String expectedStreed = "12, Cherry Ave";
@@ -34,6 +36,7 @@ public class T1_pizza_order extends TestBase {/*
 //        assertEquals(actualPizzaStreet, expectedStreed);
 
 
+        //WebDriver driver = new ChromeDriver();
 
 
         driver.get("https://loopcamp.vercel.app/web-tables.html");

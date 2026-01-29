@@ -6,7 +6,9 @@ import io.loop.test.utilities.DocuportUtils;
 import io.loop.test.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -35,8 +37,13 @@ public class T4_google_search {
     @Test
     public void docuport() throws InterruptedException {
 
-        Driver.getDriver().get("https://beta.docuport.app/");
+
+       // Driver.getDriver().get("https://beta.docuport.app/");
+        Driver.getDriver().get(ConfigurationReader.getProperties("docuportBETA"));
+        System.out.println("((RemoteWebDriver) Driver.getDriver()).getSessionId() = " + ((RemoteWebDriver) Driver.getDriver()).getSessionId());
+
         DocuportUtils.login(Driver.getDriver(), DocuportConstants.ADVISOR);
+
 
         WebElement element = Driver.getDriver().findElement(By.xpath("//span[.='My uploads']"));
         element.click();
