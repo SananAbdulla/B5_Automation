@@ -26,10 +26,8 @@ public class T6_uploads {
         WebElement chooseFile = Driver.getDriver().findElement(By.xpath("//input[@type='file']"));
         String path = "/Users/nsh/Desktop/text.txt";
         chooseFile.sendKeys(path);
-
         WebElement checkBox = Driver.getDriver().findElement(By.xpath("//input[@type='checkbox']"));
         checkBox.click();
-
         WebElement submitButton = Driver.getDriver().findElement(By.xpath("//button[@id='submitbutton']"));
         submitButton.click();
 
