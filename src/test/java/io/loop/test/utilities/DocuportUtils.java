@@ -65,6 +65,28 @@ public class DocuportUtils {
     }
 
     /**
+     * navigates back to the home dashboard from any docuport page after login
+     * @param driver
+     */
+    public static void goToHomeDashboard(WebDriver driver) {
+        WebElement homeLink = driver.findElement(By.xpath("//a[normalize-space()='" + DocuportConstants.EXPECTED_HOME_MENU_TEXT + "']"));
+        homeLink.click();
+    }
+
+    /**
+     * validates that the home dashboard is displayed
+     * @param driver
+     * @return true when current page is the home dashboard
+     */
+    public static boolean isHomeDashboardDisplayed(WebDriver driver) {
+        WebElement homeIcon = driver.findElement(By.cssSelector("i.mdi-home"));
+        WebElement homeLink = driver.findElement(By.xpath("//a[normalize-space()='" + DocuportConstants.EXPECTED_HOME_MENU_TEXT + "']"));
+        return homeIcon.isDisplayed()
+                && homeLink.isDisplayed()
+                && driver.getCurrentUrl().equals(DocuportConstants.HOME_DASHBOARD_URL);
+    }
+
+    /**
      * returns any field from table by given email
      * @param driver
      * @param emailAddress
