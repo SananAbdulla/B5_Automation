@@ -33,5 +33,8 @@ public class DocuportConstants {
     public static String SUPERVISOR = "supervisor";
     public static String EMPLOYEE = "employee";
 
+    // home dashboard
+    public static final String HOME_DASHBOARD_URL = "https://beta.docuport.app/";
+    public static final String EXPECTED_HOME_MENU_TEXT = "Home";
 
 }
